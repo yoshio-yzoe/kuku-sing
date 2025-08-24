@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九九の歌シミュレーション - 百ます計算</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>九九の歌シミュレーション</h1>
+        <p class="description">
+            九九を歌で覚えている人の百ます計算シミュレーションです。<br>
+            各問題を解くのに、1×1から順番に歌って答えを見つけます（1問あたり約6秒×順番）。
+        </p>
+        
+        <div class="controls">
+            <button id="generateBtn" class="btn primary">百ます計算を生成</button>
+            <button id="startBtn" class="btn secondary" disabled>計算開始</button>
+            <button id="resetBtn" class="btn">リセット</button>
+        </div>
+        
+        <div class="status">
+            <div id="currentProblem" class="current-problem"></div>
+            <div id="progress" class="progress">進行状況: 0/100</div>
+            <div id="timer" class="timer">経過時間: 0秒</div>
+            <div id="singProgress" class="sing-progress"></div>
+        </div>
+        
+        <div id="grid" class="grid"></div>
+        
+        <div id="results" class="results hidden">
+            <h2>結果</h2>
+            <div id="totalTime" class="total-time"></div>
+            <div id="averageTime" class="average-time"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
